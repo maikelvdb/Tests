@@ -19,6 +19,7 @@ namespace Test.Database.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Type = table.Column<int>(type: "int", nullable: false, defaultValue: 2),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -28,14 +29,14 @@ namespace Test.Database.Migrations
 
             migrationBuilder.InsertData(
                 table: "TestItems",
-                columns: new[] { "Id", "CreatedAt", "Name" },
+                columns: new[] { "Id", "CreatedAt", "Name", "Type" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7817), "Test 1" },
-                    { 2, new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7818), "Test 2" },
-                    { 3, new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7819), "Test 3" },
-                    { 4, new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7821), "Test 4" },
-                    { 5, new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7822), "Test 5" }
+                    { 1, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2851), "Test 1", 0 },
+                    { 2, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2857), "Test 2", 0 },
+                    { 3, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2859), "Test 3", 0 },
+                    { 4, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2861), "Test 4", 0 },
+                    { 5, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2863), "Test 5", 0 }
                 });
 
             migrationBuilder.CreateIndex(

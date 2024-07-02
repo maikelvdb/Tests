@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Options;
 using Test.Api.Middleware;
 using Test.Api.ParameterBinding.FromItem;
 

@@ -37,6 +37,9 @@ namespace Test.Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Id")
@@ -48,32 +51,37 @@ namespace Test.Database.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7817),
-                            Name = "Test 1"
+                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2851),
+                            Name = "Test 1",
+                            Type = 0
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7818),
-                            Name = "Test 2"
+                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2857),
+                            Name = "Test 2",
+                            Type = 0
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7819),
-                            Name = "Test 3"
+                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2859),
+                            Name = "Test 3",
+                            Type = 0
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7821),
-                            Name = "Test 4"
+                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2861),
+                            Name = "Test 4",
+                            Type = 0
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2024, 3, 22, 10, 18, 0, 629, DateTimeKind.Utc).AddTicks(7822),
-                            Name = "Test 5"
+                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2863),
+                            Name = "Test 5",
+                            Type = 0
                         });
                 });
 #pragma warning restore 612, 618
