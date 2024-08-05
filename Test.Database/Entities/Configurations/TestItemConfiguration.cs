@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Test.Database.Enums;
 
 namespace Test.Database.Entities.Configurations
 {
@@ -10,6 +11,7 @@ namespace Test.Database.Entities.Configurations
             builder.ToTable("TestItems");
             builder.HasKey(x => x.Id);
             builder.HasIndex(x => x.Id).IsUnique();
+            builder.Property(x => x.Type).HasDefaultValue(TestEnum.Value3).HasSentinel(-1);
 
             builder.HasData(
                 new TestItem { Id = 1, Name = "Test 1" },

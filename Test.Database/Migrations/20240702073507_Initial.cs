@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -19,7 +20,7 @@ namespace Test.Database.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<int>(type: "int", nullable: false, defaultValue: 2),
+                    Type = table.Column<int>(type: "int", nullable: false, defaultValue: 3),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -29,14 +30,14 @@ namespace Test.Database.Migrations
 
             migrationBuilder.InsertData(
                 table: "TestItems",
-                columns: new[] { "Id", "CreatedAt", "Name", "Type" },
+                columns: new[] { "Id", "CreatedAt", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2851), "Test 1", 0 },
-                    { 2, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2857), "Test 2", 0 },
-                    { 3, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2859), "Test 3", 0 },
-                    { 4, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2861), "Test 4", 0 },
-                    { 5, new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2863), "Test 5", 0 }
+                    { 1, new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2800), "Test 1" },
+                    { 2, new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2802), "Test 2" },
+                    { 3, new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2803), "Test 3" },
+                    { 4, new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2804), "Test 4" },
+                    { 5, new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2805), "Test 5" }
                 });
 
             migrationBuilder.CreateIndex(

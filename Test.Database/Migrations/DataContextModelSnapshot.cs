@@ -38,7 +38,9 @@ namespace Test.Database.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Type")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(3);
 
                     b.HasKey("Id");
 
@@ -51,35 +53,35 @@ namespace Test.Database.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2851),
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2800),
                             Name = "Test 1",
                             Type = 0
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2857),
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2802),
                             Name = "Test 2",
                             Type = 0
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2859),
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2803),
                             Name = "Test 3",
                             Type = 0
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2861),
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2804),
                             Name = "Test 4",
                             Type = 0
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2863),
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2805),
                             Name = "Test 5",
                             Type = 0
                         });

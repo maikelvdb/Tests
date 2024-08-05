@@ -25,6 +25,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseMiddleware<SetCorrelationIdMiddleware>();
+app.UseMiddleware<RouteVersionMiddleware>();
 
 app.UseAuthorization();
 

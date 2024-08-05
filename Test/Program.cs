@@ -1,23 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Test.Database;
-using Test.Database.Entities;
+﻿
 
-using var db = await DataContext.Create()
-    ?? throw new InvalidOperationException("Could not get DataContext from service provider");
+var begin = new DateTime(2020, 1, 1);
+DateTime? end = null;
 
-await db.Database.MigrateAsync();
-
-db.Set<TestItem>().Add(new TestItem()
+if (!(end != null && end <= begin))
 {
-    Name = "Test Item",
-    Type = Test.Database.Enums.TestEnum.Default,
-});
-
-await db.SaveChangesAsync();
-
-var all = await db.Set<TestItem>().ToListAsync();
-
-foreach (var item in all)
-{
-    Console.WriteLine($"Item: {item.Name} - {item.Type}");
+    Console.WriteLine("End date must be greater than begin date");
 }
+
+
+Console.ReadLine();
