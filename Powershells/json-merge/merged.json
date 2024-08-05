@@ -1,0 +1,25 @@
+﻿{
+    "keepText":  "static",
+    "text":  "bla EDIT",
+    "keepInt":  1,
+    "int":  99,
+    "keepBool":  true,
+    "bool":  true,
+    "keepObj":  {
+                    "text":  "bla",
+                    "int":  12,
+                    "bool":  false
+                },
+    "obj":  {
+                "text":  "bla EDIT",
+                "int":  999,
+                "bool":  true
+            },
+    "keepArray":  [
+                      "*"
+                  ],
+    "array":  [
+                  "localhost",
+                  "/"
+              ]
+}

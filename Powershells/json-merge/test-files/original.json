@@ -1,0 +1,23 @@
+{
+	"keepText": "static",
+	"text": "bla",
+	"keepInt": 1,
+	"int": 12,
+	"keepBool": true,
+	"bool": false,
+	"keepObj": {
+		"text": "bla",
+		"int": 12,
+		"bool": false
+	},
+	"obj": {
+		"text": "bla",
+		"int": 12,
+		"bool": false
+	},
+	"keepArray": [ "*" ],
+	"array": [
+		"*",
+		"/"
+	]
+}
