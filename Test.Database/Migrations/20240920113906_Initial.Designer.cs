@@ -12,7 +12,7 @@ using Test.Database;
 namespace Test.Database.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240702065611_Initial")]
+    [Migration("20240920113906_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -36,6 +36,9 @@ namespace Test.Database.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool?>("NUllableBool")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -54,35 +57,35 @@ namespace Test.Database.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2851),
+                            CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1402),
                             Name = "Test 1",
                             Type = 0
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2857),
+                            CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1407),
                             Name = "Test 2",
                             Type = 0
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2859),
+                            CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1408),
                             Name = "Test 3",
                             Type = 0
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2861),
+                            CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1409),
                             Name = "Test 4",
                             Type = 0
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2024, 7, 2, 6, 56, 10, 766, DateTimeKind.Utc).AddTicks(2863),
+                            CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1410),
                             Name = "Test 5",
                             Type = 0
                         });

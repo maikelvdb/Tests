@@ -14,6 +14,8 @@ if ($action -eq 'add' -or $action -eq 'both') {
     # Ask for the migration name
     $migrationName = Read-Host -Prompt 'Enter the migration name'
 
+
+    Write-Host "dotnet ef migrations add $migrationName --startup-project $startupProject --project $targetProject --output-dir $outputDir"
     # Run the dotnet ef migrations add command
     dotnet ef migrations add $migrationName --startup-project $startupProject --project $targetProject --output-dir $outputDir
 

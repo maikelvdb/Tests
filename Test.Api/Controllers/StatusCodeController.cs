@@ -1,18 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Test.Api.Controllers
+namespace Test.Api.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class StatusCodeController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class StatusCodeController : ControllerBase
+
+    [HttpGet("{StatusCode:int}")]
+    public IActionResult GetStatusCode([FromRoute(Name = "StatusCode")] int statusCode)
     {
+        var httpStatusCode = (System.Net.HttpStatusCode)statusCode;
 
-        [HttpGet("{StatusCode:int}")]
-        public IActionResult StatusCode([FromRoute(Name = "StatusCode")] int statusCode)
-        {
-            var httpStatusCode = (System.Net.HttpStatusCode)statusCode;
-
-            return StatusCode(statusCode, httpStatusCode.ToString());
-        }
+        return StatusCode(statusCode, httpStatusCode.ToString());
     }
 }
