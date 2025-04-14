@@ -12,7 +12,11 @@ using Test.Database;
 namespace Test.Database.Migrations
 {
     [DbContext(typeof(DataContext))]
+<<<<<<<< HEAD:Test.Database/Migrations/20240920113906_Initial.Designer.cs
     [Migration("20240920113906_Initial")]
+========
+    [Migration("20240702073507_Initial")]
+>>>>>>>> d4cdb29cf31665763a70d3617b98940a4be178a2:Test.Database/Migrations/20240702073507_Initial.Designer.cs
     partial class Initial
     {
         /// <inheritdoc />
@@ -44,7 +48,9 @@ namespace Test.Database.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Type")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(3);
 
                     b.HasKey("Id");
 
@@ -57,35 +63,55 @@ namespace Test.Database.Migrations
                         new
                         {
                             Id = 1,
+<<<<<<<< HEAD:Test.Database/Migrations/20240920113906_Initial.Designer.cs
                             CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1402),
+========
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2800),
+>>>>>>>> d4cdb29cf31665763a70d3617b98940a4be178a2:Test.Database/Migrations/20240702073507_Initial.Designer.cs
                             Name = "Test 1",
                             Type = 0
                         },
                         new
                         {
                             Id = 2,
+<<<<<<<< HEAD:Test.Database/Migrations/20240920113906_Initial.Designer.cs
                             CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1407),
+========
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2802),
+>>>>>>>> d4cdb29cf31665763a70d3617b98940a4be178a2:Test.Database/Migrations/20240702073507_Initial.Designer.cs
                             Name = "Test 2",
                             Type = 0
                         },
                         new
                         {
                             Id = 3,
+<<<<<<<< HEAD:Test.Database/Migrations/20240920113906_Initial.Designer.cs
                             CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1408),
+========
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2803),
+>>>>>>>> d4cdb29cf31665763a70d3617b98940a4be178a2:Test.Database/Migrations/20240702073507_Initial.Designer.cs
                             Name = "Test 3",
                             Type = 0
                         },
                         new
                         {
                             Id = 4,
+<<<<<<<< HEAD:Test.Database/Migrations/20240920113906_Initial.Designer.cs
                             CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1409),
+========
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2804),
+>>>>>>>> d4cdb29cf31665763a70d3617b98940a4be178a2:Test.Database/Migrations/20240702073507_Initial.Designer.cs
                             Name = "Test 4",
                             Type = 0
                         },
                         new
                         {
                             Id = 5,
+<<<<<<<< HEAD:Test.Database/Migrations/20240920113906_Initial.Designer.cs
                             CreatedAt = new DateTime(2024, 9, 20, 11, 39, 5, 407, DateTimeKind.Utc).AddTicks(1410),
+========
+                            CreatedAt = new DateTime(2024, 7, 2, 7, 35, 7, 577, DateTimeKind.Utc).AddTicks(2805),
+>>>>>>>> d4cdb29cf31665763a70d3617b98940a4be178a2:Test.Database/Migrations/20240702073507_Initial.Designer.cs
                             Name = "Test 5",
                             Type = 0
                         });

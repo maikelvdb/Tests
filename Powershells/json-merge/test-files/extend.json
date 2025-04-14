@@ -1,0 +1,13 @@
+{
+	"text": "bla EDIT",
+	"int": 99,
+	"bool": true,
+	"obj": {
+		"text": "bla EDIT",
+		"int": 999,
+		"bool": true
+	},
+	"array": [
+		"localhost"
+	]
+}

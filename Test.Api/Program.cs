@@ -54,6 +54,7 @@ app.UseHttpsRedirection();
 app.UseCors();
 
 app.UseMiddleware<SetCorrelationIdMiddleware>();
+app.UseMiddleware<RouteVersionMiddleware>();
 
 app.UseAuthorization();
 
